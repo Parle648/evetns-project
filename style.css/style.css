@@ -324,6 +324,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #6CAC3D;
+  margin-bottom: 33px;
 }
 .wrapper .offers-nav .offers-item {
   width: 230px;
@@ -375,19 +376,35 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 719px;
+  margin-bottom: 73px;
 }
 .introducntion .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.introducntion .intoducntion-description {
   padding-top: 63px;
+}
+.introducntion .intoducntion-description .main-ttl {
+  margin-bottom: 31px;
+  width: 563px;
+  font-family: "Roboto";
+  font-size: 60px;
+  font-weight: 700;
+}
+.introducntion .intoducntion-description .main-subttl {
+  font-family: "Roboto";
+  margin-bottom: 75px;
+  font-size: 44px;
+  font-weight: 700;
 }
 .introducntion .intoducntion-description .green-block {
   background-color: #6CAC3D;
   color: #fff;
-  border-radius: 3px;
-  padding: 5px 15px;
-  font-size: 28px;
+  padding: 3px;
+  border-radius: 10px;
+  font-size: 60px;
 }
 .introducntion .intoducntion-description .ttl-flex {
   display: -ms-grid;
@@ -420,7 +437,6 @@ body {
   width: 382px;
   background-color: #fff;
   border-radius: 4px;
-  border: 1px solid #595959;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,6 +453,7 @@ body {
   font-size: 20px;
   font-weight: 900;
   color: #171616;
+  margin-bottom: 28px;
 }
 .calculation-unit .type-of-fixing {
   color: #C4C4C4;
@@ -445,6 +462,7 @@ body {
   font-weight: 700;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  margin-bottom: 20px;
 }
 .calculation-unit .fixing-unit {
   display: -webkit-box;
@@ -452,6 +470,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 10px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #C4C4C4;
 }
 .calculation-unit .fixing-unit .fixing-label {
   width: 50%;
@@ -489,6 +510,7 @@ body {
 .calculation-unit .type-of-accomodation {
   color: #C4C4C4;
   font-family: "Roboto";
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 700;
   -ms-flex-item-align: start;
@@ -501,6 +523,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #C4C4C4;
 }
 .calculation-unit .accomodation-unit .accomodation-label {
   width: 50%;
@@ -540,17 +565,23 @@ body {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 700;
+  margin-bottom: 20px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 .calculation-unit .rooms-unit {
+  padding-bottom: 10px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #C4C4C4;
+}
+.calculation-unit .rooms-unit .rooms-inner-unit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 65%;
+  width: 69%;
 }
 .calculation-unit .rooms-unit .rooms-label {
   display: -webkit-box;
@@ -591,10 +622,12 @@ body {
   font-weight: 700;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  margin-bottom: 20px;
 }
 .calculation-unit .area-slider {
   width: 319px;
   height: 6px;
+  margin-bottom: 30px;
   border: 1px solid #C4C4C4;
   position: relative;
   border-radius: 3px;
@@ -621,6 +654,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #C4C4C4;
+  padding: 17px 0px 18px;
 }
 .calculation-unit .sale-unit .sale-inner-block {
   width: 380px;
@@ -634,6 +670,13 @@ body {
 .calculation-unit .sale-unit .sale-inner-block .sale-inner-ttl .bold {
   font-size: 18px;
   font-weight: 700;
+}
+.calculation-unit .enter-numb-ttl {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 700;
+  color: #C4C4C4;
+  margin-bottom: 17px;
 }
 .calculation-unit .enter-number {
   display: -webkit-box;
@@ -670,6 +713,151 @@ body {
   padding: 13px 31px;
 }
 .calculation-unit .submit-btn:hover {
+  cursor: pointer;
+  background-color: rgba(107, 172, 61, 0.8039215686);
+}
+
+.amount-offers-ttl {
+  font-family: "Roboto";
+  font-size: 42px;
+  font-weight: 700;
+  color: #171616;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.amount-on-offers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.amount-unit {
+  width: 284px;
+  height: 582px;
+  border-radius: 16px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+          transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.amount-unit:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 77px 13px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 77px 13px rgba(34, 60, 80, 0.2);
+}
+.amount-unit .amount-description {
+  background-color: #E3EAEF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 39px 14px 27px;
+  margin-bottom: 24px;
+  border-radius: 16px 16px 0px 0px;
+}
+.amount-unit .amount-description .amount-img {
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.amount-unit .amount-description .amount-description-block .amount-descriptiion-ttl,
+.amount-unit .amount-description .amount-description-block .amount-descriptiion-subttl {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 700;
+  color: #6CAC3D;
+}
+.amount-unit .amount-description .amount-description-block .amount-descriptiion-subttl {
+  font-size: 14px;
+  color: #171616;
+}
+.amount-unit .amount-paragr {
+  width: 239px;
+  height: 101px;
+  margin: 0 auto 30px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  color: #171616;
+}
+.amount-unit .service-ttl {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 700;
+  color: #171616;
+  margin: 15px 0px 9px 27px;
+}
+.amount-unit .offer-inner-list .offer-list-item {
+  margin-bottom: 6px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  color: #171616;
+}
+.amount-unit .offer-inner-list .offer-list-item .checkmark {
+  display: inline-block;
+  margin: 0px 7px 0px 27px;
+}
+.amount-unit .additionaly-service {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 700;
+  color: #C4C4C4;
+  margin: 15px 0px 30px 27px;
+}
+.amount-unit .list-of-works {
+  color: #2D4872;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+.amount-unit .list-of-works .bottomn-arrow {
+  margin-left: 2px;
+}
+.amount-unit .crossline {
+  font-size: 14px;
+  font-family: "Roboto";
+  font-weight: 400;
+  color: #171616;
+  text-decoration: line-through;
+  margin-left: 29px;
+}
+.amount-unit .crossline .crossline-bold {
+  font-weight: 700;
+}
+.amount-unit .green {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 700;
+  color: #6CAC3D;
+  margin-left: 6px;
+}
+.amount-unit .give-smeta {
+  color: #fff;
+  background-color: #6CAC3D;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 700;
+  border: 0px;
+  border-radius: 4px;
+  padding: 13px 26px;
+  margin: 21px 0px 0px 48px;
+}
+.amount-unit .give-smeta:hover {
   cursor: pointer;
   background-color: rgba(107, 172, 61, 0.8039215686);
 }
