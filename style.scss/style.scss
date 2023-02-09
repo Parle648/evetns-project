@@ -433,31 +433,48 @@ body {
             display: flex;
             align-items: center;
             margin-bottom: 9px;
+            &:hover{
+                cursor: pointer;
+            }
 
             .fake-fixing-checkbox {
                 width: 16px;
                 height: 16px;
                 border-radius: 50%;
-                border: 2px solid $blue;
+                border: 2px solid $grey;
                 position: relative;
                 margin-right: 10px;
-
+                transition: .3s;
+                &:hover{
+                    cursor: pointer;
+                }
+                
                 &::before {
                     content: '';
+                    transition: .3s;
                     width: 10px;
                     height: 10px;
                     border-radius: 50%;
-                    background-color: $blue;
+                    background-color: #fff;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
             }
+            
+            .fixing-input:checked + .fake-fixing-checkbox{
+                border-color: $blue;
+            }
+            .fixing-input:checked + .fake-fixing-checkbox::before{
+                background-color: $blue;
+            }
 
             .fixing-input {
                 display: none;
             }
+
+
         }
     }
 
@@ -482,26 +499,40 @@ body {
             display: flex;
             align-items: center;
             margin-bottom: 9px;
+            &:hover{
+                cursor: pointer;
+            }
 
             .accomodation-fake-radio {
                 width: 16px;
                 height: 16px;
                 border-radius: 50%;
-                border: 2px solid $blue;
+                border: 2px solid $grey;
                 position: relative;
                 margin-right: 10px;
+                transition-duration: .3s;
+                &:hover{
+                    cursor: pointer;
+                }
 
                 &::before {
                     content: '';
+                    transition-duration: .3s;
                     width: 10px;
                     height: 10px;
                     border-radius: 50%;
-                    background-color: $blue;
+                    background-color: #fff;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
+            }
+            .accomodation-input:checked + .accomodation-fake-radio{
+                border-color: $blue;
+            }
+            .accomodation-input:checked + .accomodation-fake-radio::before{
+                background-color: $blue;
             }
 
             .accomodation-input {
@@ -533,27 +564,42 @@ body {
         .rooms-label {
             display: flex;
             align-items: center;
+            &:hover{
+                cursor: pointer;
+            }
 
             .rooms-fake-radio {
                 width: 16px;
                 height: 16px;
                 border-radius: 50%;
-                border: 2px solid $blue;
+                border: 2px solid $grey;
                 position: relative;
                 margin-right: 10px;
                 display: inline-block;
+                transition-duration: .3s;
+                &:hover{
+                    cursor: pointer;
+                }
 
                 &::before {
                     content: '';
                     width: 10px;
+                    transition-duration: .3s;
                     height: 10px;
                     border-radius: 50%;
-                    background-color: $blue;
+                    background-color: #fff;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
+            }
+
+            .rooms-input:checked + .rooms-fake-radio{
+                border-color: $blue;
+            }
+            .rooms-input:checked + .rooms-fake-radio::before{
+                background-color: $blue;
             }
 
             .rooms-input {
@@ -594,6 +640,9 @@ body {
                 cursor: pointer;
             }
         }
+    }
+    .area-choise-result{
+        margin: -44px 0px 35px 340px;
     }
 
     .sale-unit {
@@ -859,33 +908,46 @@ body {
     .exapmple-radio-var {
         display: flex;
         align-items: center;
+        &:hover{
+            cursor: pointer;
+        }
 
         .example-fake-radio {
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            border: 2px solid $blue;
+            border: 2px solid $grey;
             position: relative;
             margin-right: 13px;
             display: inline-block;
+            &:hover{
+                cursor: pointer;
+                border-color: #595959;
+            }
 
             &::before {
                 content: '';
-                display: none;
                 width: 10px;
                 height: 10px;
                 border-radius: 50%;
-                background-color: $blue;
+                background-color: #fff;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
         }
+        .example-input:checked + .example-fake-radio::before{
+            background-color: $blue;
+            .example-fake-radio{
+                border-color: $blue;
+            }
+        }
 
         .example-input {
             display: none;
         }
+
     }
 }
 

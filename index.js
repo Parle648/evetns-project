@@ -44,5 +44,40 @@ navElem.addEventListener('click', function(event){
         })
         event.target.closest('.body-offer-item').style.border = '1px solid green'
     }
+})
 
+
+const sliderTarget = document.querySelector('.area-target')
+const slider = document.querySelector('area-slider')
+let result = document.querySelector('.area-choise-result')
+
+result.style.display = 'inline'
+
+sliderTarget.addEventListener('mousedown', function(event){
+
+    function move(event) {
+        let margin = event.clientX - sliderTarget.parentNode.offsetLeft - sliderTarget.parentNode.parentNode.getBoundingClientRect().x - 11
+
+        if(margin <= 0){
+            sliderTarget.style.left = '0px'
+            result.innerHTML = 0
+        }
+        else if( margin >= 298){
+            sliderTarget.style.left = '298px'
+            result.innerHTML = 150
+        }
+        else{
+            sliderTarget.style.left = `${margin}px`
+            result.innerHTML = Math.floor((margin / 289) * 150)
+        }
+    }
+    sliderTarget.addEventListener('mousemove', move)
+    document.addEventListener('mousemove', move)
+
+    document.onmouseup = () => {
+        document.removeEventListener('mousemove', move)
+    }
+    sliderTarget.onmouseup = () => {
+        sliderTarget.removeEventListener('mousemove', move)
+    }
 })
