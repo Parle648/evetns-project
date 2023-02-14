@@ -1322,3 +1322,185 @@ body {
   width: 829px;
   margin: 0 auto 25px;
 }
+
+.own-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  padding: 50px 22px 23px;
+  background-color: #fff;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 0px 10px rgba(192, 192, 192, 0.25);
+          box-shadow: 0px 0px 10px rgba(192, 192, 192, 0.25);
+  margin-bottom: 34px;
+}
+.own-list .own-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  color: #171616;
+}
+.own-list .own-item .own-img {
+  width: 46px;
+  height: 46px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.own-images-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 113px;
+}
+
+.own-out-img {
+  width: 591px;
+}
+
+.quality-ttl {
+  font-family: "Roboto";
+  font-size: 42px;
+  font-weight: 700;
+  color: #171616;
+  text-align: center;
+  margin-top: 130px;
+  width: 829px;
+  margin: 0 auto 25px;
+}
+
+.quality-subttl {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 300;
+  color: #171616;
+  width: 773px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.quality-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 115px;
+}
+.quality-block .quality-img {
+  display: inline;
+  width: 609px;
+  height: 349px;
+}
+.quality-block .quality-grid {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: 194px 58px 194px 58px 194px;
+  grid-template-columns: repeat(3, 194px);
+  grid-gap: 58px;
+  margin-left: 24px;
+}
+.quality-block .quality-grid .quality-grid-item .fraction {
+  margin-bottom: 10px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 700;
+  color: #C4C4C4;
+}
+.quality-block .quality-grid .quality-grid-item .fraction .green {
+  color: #83e53d;
+  font-size: 24px;
+}
+.quality-block .quality-grid .quality-grid-item .grid-inner-ttl {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 700;
+  color: #171616;
+  margin-bottom: 33px;
+}
+.quality-block .quality-grid .quality-grid-item .grid-inner-paragr {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  color: #171616;
+  width: 194px;
+}
+
+.our-benefits {
+  font-family: "Roboto";
+  font-size: 42px;
+  font-weight: 700;
+  color: #171616;
+  text-align: center;
+  margin-top: 130px;
+  width: 829px;
+  margin: 0 auto;
+  margin-bottom: 57px;
+}
+
+.benefit-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: -116px;
+  margin-bottom: 61px;
+}
+.benefit-list .benefit-list-item {
+  width: 285px;
+}
+.benefit-list .benefit-list-item .benefit-img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 3px;
+}
+.benefit-list .benefit-list-item .benef-item-ttl {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 700;
+  color: #171616;
+  margin-bottom: 33px;
+}
+.benefit-list .benefit-list-item .benef-item-subttl {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  color: #171616;
+}
+.benefit-list .slaviane {
+  width: 232px;
+}
+
+.reviews-ttl {
+  font-family: "Roboto";
+  font-size: 42px;
+  font-weight: 700;
+  color: #171616;
+  text-align: center;
+  margin-top: 130px;
+  width: 829px;
+  margin: 0 auto;
+  margin-bottom: 57px;
+}

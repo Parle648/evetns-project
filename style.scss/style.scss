@@ -1254,3 +1254,156 @@ body {
     width: 829px;
     margin: 0 auto 25px;
 }
+.own-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 50px 22px 23px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px rgba(192, 192, 192, 0.25);
+    margin-bottom: 34px;
+    .own-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 500;
+        color: $dark;
+        .own-img {
+            width: 46px;
+            height: 46px;
+            display: block;
+            margin-bottom: 6px;
+        }
+    }
+}
+
+.own-images-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 113px;
+}
+.own-out-img {
+    width: 591px;
+}
+
+.quality-ttl {
+    font-family: 'Roboto';
+    font-size: 42px;
+    font-weight: 700;
+    color: $dark;
+    text-align: center;
+    margin-top: 130px;
+    width: 829px;
+    margin: 0 auto 25px;
+}
+.quality-subttl {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 300;
+    color: $dark;
+    width: 773px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.quality-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 115px;
+    .quality-img {
+        display: inline;
+        width: 609px;
+        height: 349px;
+    }
+    .quality-grid {
+        display: inline-grid;
+        grid-template-columns: repeat(3, 194px);
+        grid-gap: 58px;
+        margin-left: 24px;
+        .quality-grid-item {
+            .fraction {
+                margin-bottom: 10px;
+                font-family: 'Roboto';
+                font-size: 16px;
+                font-weight: 700;
+                color: $grey;
+                .green {
+                    color: #83e53d;
+                    font-size: 24px;
+                }
+            }
+            .grid-inner-ttl {
+                font-family: 'Roboto';
+                font-size: 18px;
+                font-weight: 700;
+                color: $dark;
+                margin-bottom: 33px;
+           }
+            .grid-inner-paragr {
+                font-family: 'Roboto';
+                font-size: 14px;
+                font-weight: 400;
+                color: $dark;
+                width: 194px;
+            }
+        }
+    }
+}
+
+.our-benefits{
+    font-family: 'Roboto';
+    font-size: 42px;
+    font-weight: 700;
+    color: $dark;
+    text-align: center;
+    margin-top: 130px;
+    width: 829px;
+    margin: 0 auto;
+    margin-bottom: 57px;
+}
+
+.benefit-list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: -116px;
+    margin-bottom: 61px;
+    .benefit-list-item {
+        width: 285px;
+        .benefit-img{
+            width: 36px;
+            height: 36px;
+            margin-bottom: 3px;
+        }
+        .benef-item-ttl {
+            font-family: 'Roboto';
+            font-size: 18px;
+            font-weight: 700;
+            color: $dark;
+            margin-bottom: 33px;
+        }
+        .benef-item-subttl {
+            font-family: 'Roboto';
+            font-size: 14px;
+            font-weight: 400;
+            color: $dark;
+        }
+    }
+    .slaviane{
+        width: 232px;
+    }
+}
+
+.reviews-ttl{
+    font-family: 'Roboto';
+    font-size: 42px;
+    font-weight: 700;
+    color: $dark;
+    text-align: center;
+    margin-top: 130px;
+    width: 829px;
+    margin: 0 auto;
+    margin-bottom: 57px;
+}

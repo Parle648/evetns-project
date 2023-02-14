@@ -81,3 +81,18 @@ sliderTarget.addEventListener('mousedown', function(event){
         sliderTarget.removeEventListener('mousemove', move)
     }
 })
+
+
+const btn = document.querySelector('.tap')
+
+const c = document.querySelector('.cont')
+
+c.addEventListener('click', function(event){
+    console.log('its - work second')
+    event.stopPropagation()
+}, true)
+
+btn.addEventListener('click', function(event){
+    console.log('its - work')
+    event.stopPropagation()
+})
