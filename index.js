@@ -82,17 +82,102 @@ sliderTarget.addEventListener('mousedown', function(event){
     }
 })
 
+document.querySelectorAll('.cart-description-item').forEach(function(element){
+});
 
-const btn = document.querySelector('.tap')
+const sliderLeftImgsBlock = document.querySelector('.slider-left'),
+    leftImgs = document.querySelectorAll('.slider-left-img'),
+    cartImg = document.querySelector('.cart-img'),
+    cartProperty = document.querySelectorAll('.cart-offer_value'),
+    btns = document.querySelectorAll('.slider-btn')
 
-const c = document.querySelector('.cont')
+const exampleSObject = [
+    [   '500 000 руб',
+        '50',
+        '120 дней',
+        '2 комнаты',
+        'Зажопинск Стрит 13',
+    ],
+    [   '456 000 руб',
+        '50',
+        '120 дней',
+        '2 комнаты',
+        'Зажопинск Стрит 13',
+    ],
+    [   '272 250 руб',
+        '50',
+        '30 дней',
+        '2 комнаты',
+        'Зажопинск Стрит 13',
+    ],
+    [   '150 000 руб',
+        '50',
+        '120 дней',
+        '2 комнаты',
+        'Зажопинск Стрит 13',
+    ],
+    [   '680 980 руб',
+        '50',
+        '120 дней',
+        '2 комнаты',
+        'Зажопинск Стрит 13',
+    ],
+]
 
-c.addEventListener('click', function(event){
-    console.log('its - work second')
-    event.stopPropagation()
-}, true)
+function changeImgs(element){
+    leftImgs.forEach(function(img){
+        img.classList.remove('slider-left_active')
+    })
+    element.classList.add('slider-left_active')
+} 
 
-btn.addEventListener('click', function(event){
-    console.log('its - work')
-    event.stopPropagation()
+function changeSlidercart(element){
+    const exampleData = exampleSObject[Number(element.getAttribute('data-number'))]
+
+    cartImg.setAttribute('src', element.getAttribute('src'))
+
+    for (let index = 0; index <= exampleData.length; index++) {
+        cartProperty[index].innerHTML = exampleData[index]
+    }
+}
+
+sliderLeftImgsBlock.addEventListener('click', function(event){
+    if(event.target.closest('.slider-left-img')){
+        changeImgs(event.target);
+        changeSlidercart(event.target);
+    }
+})
+
+btns.forEach(function(button){
+    button.addEventListener('click', function(event){
+        if(event.target.closest('.slider-btn_right')){
+            const nextImg = document.querySelector('.slider-left_active').parentNode.nextElementSibling.firstElementChild
+            changeImgs(nextImg);
+            changeSlidercart(nextImg)
+        } else{
+            const previousElement = document.querySelector('.slider-left_active').parentNode.previousElementSibling.firstElementChild
+            changeImgs(previousElement);
+            changeSlidercart(previousElement)
+        }
+    })
+})
+
+const workSliderBtns = document.querySelectorAll('.work-slider-btn'),
+      workSliderTarget = document.querySelector('.work-slider_trigger')
+
+let marginCounter = 0;      
+
+workSliderBtns.forEach(function(button){
+    button.addEventListener('click', function(event){
+        if(event.target.closest('.work-slider-btn_right')){
+            console.log(workSliderTarget.style.marginLeft)
+            marginCounter -= workSliderTarget.clientWidth
+            
+            workSliderTarget.style.marginLeft = `${marginCounter}px`
+        } else{
+            marginCounter += workSliderTarget.clientWidth
+            
+            workSliderTarget.style.marginLeft = `${marginCounter}px`
+        }
+    })
 })
