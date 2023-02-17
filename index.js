@@ -52,25 +52,21 @@ const slider = document.querySelector('area-slider')
 let result = document.querySelector('.area-choise-result')
 
 result.style.display = 'inline'
+function move(event) {
+    let margin = event.clientX - sliderTarget.parentNode.offsetLeft - sliderTarget.parentNode.parentNode.getBoundingClientRect().x - 11
+    if(margin <= 0){
+        sliderTarget.style.left = '0px'
+        result.innerHTML = 0
+    } else if( margin >= 298){
+        sliderTarget.style.left = '298px'
+        result.innerHTML = 150
+    } else{
+        sliderTarget.style.left = `${margin}px`
+        result.innerHTML = Math.floor((margin / 289) * 150)
+    }
+}
 
 sliderTarget.addEventListener('mousedown', function(event){
-
-    function move(event) {
-        let margin = event.clientX - sliderTarget.parentNode.offsetLeft - sliderTarget.parentNode.parentNode.getBoundingClientRect().x - 11
-
-        if(margin <= 0){
-            sliderTarget.style.left = '0px'
-            result.innerHTML = 0
-        }
-        else if( margin >= 298){
-            sliderTarget.style.left = '298px'
-            result.innerHTML = 150
-        }
-        else{
-            sliderTarget.style.left = `${margin}px`
-            result.innerHTML = Math.floor((margin / 289) * 150)
-        }
-    }
     sliderTarget.addEventListener('mousemove', move)
     document.addEventListener('mousemove', move)
 
@@ -81,9 +77,6 @@ sliderTarget.addEventListener('mousedown', function(event){
         sliderTarget.removeEventListener('mousemove', move)
     }
 })
-
-document.querySelectorAll('.cart-description-item').forEach(function(element){
-});
 
 const sliderLeftImgsBlock = document.querySelector('.slider-left'),
     leftImgs = document.querySelectorAll('.slider-left-img'),
@@ -123,7 +116,6 @@ const exampleSObject = [
         'Зажопинск Стрит 13',
     ],
 ]
-
 function changeImgs(element){
     leftImgs.forEach(function(img){
         img.classList.remove('slider-left_active')
@@ -133,9 +125,7 @@ function changeImgs(element){
 
 function changeSlidercart(element){
     const exampleData = exampleSObject[Number(element.getAttribute('data-number'))]
-
     cartImg.setAttribute('src', element.getAttribute('src'))
-
     for (let index = 0; index <= exampleData.length; index++) {
         cartProperty[index].innerHTML = exampleData[index]
     }
@@ -170,14 +160,39 @@ let marginCounter = 0;
 workSliderBtns.forEach(function(button){
     button.addEventListener('click', function(event){
         if(event.target.closest('.work-slider-btn_right')){
-            console.log(workSliderTarget.style.marginLeft)
             marginCounter -= workSliderTarget.clientWidth
-            
             workSliderTarget.style.marginLeft = `${marginCounter}px`
         } else{
             marginCounter += workSliderTarget.clientWidth
-            
             workSliderTarget.style.marginLeft = `${marginCounter}px`
         }
     })
 })
+
+
+const faqBlocks = document.querySelectorAll('.faq-answer-block'),
+      question = document.querySelectorAll('.faq__question'),
+      answers = document.querySelectorAll('.faq-answer__ttl');
+
+function removeModules(element, currentElement, module){
+    element.forEach(function(el){
+        el.classList.remove(module)
+    })
+    if(currentElement.closest(module)){
+        currentElement.classList.remove(module)    
+    } else {
+        currentElement.classList.add(module)    
+    }
+}      
+
+function showAnswer(item){
+    item.addEventListener('click', function(event){
+        let parentBlock = event.currentTarget.parentNode,
+            answer = parentBlock.lastElementChild;
+        
+        removeModules(faqBlocks, parentBlock, 'faq-answer-block_active');
+        removeModules(answers, answer, 'faq-answer__ttl_visible');
+    })
+}      
+
+question.forEach(showAnswer)   

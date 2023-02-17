@@ -1776,38 +1776,58 @@ body {
     margin-bottom: 65px;
 }
 .faq {
-
-		// .faq__item
-
-		&__item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 31px;
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 31px;
+    }
+    &__img {
+        &:hover{
+            cursor: pointer;
         }
-
-		// .faq__img
-
-		&__img {
-            &:hover{
-                cursor: pointer;
-            }
-		}
-
-		// .faq__question
-
-		&__question {
-            font-family: 'Roboto';
-            font-size: 18px;
-            font-weight: 400;
-            color: $dark;
-            margin-left: 27px;
-            transition-duration: .2s;
-            &:hover{
-                cursor: pointer;
-                color: #6CAC3D;
-                text-decoration: underline;
-            }
-		}
+    }
+    &__question {
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 400;
+        color: $dark;
+        margin-left: 27px;
+        margin-bottom: 14px;
+        transition-duration: .2s;
+        &:hover{
+            cursor: pointer;
+            color: #6CAC3D;
+            text-decoration: underline;
+        }
+    }
+}
+.geen-link{
+    color: #6CAC3D;
+    text-decoration: underline;
+}
+.faq-answer-block {
+}
+.faq-answer-block_active{
+    background-color: #F2F2F2;
+    width: 1098px;
+    height: 102px;
+}
+.faq {
+    &__question {
+        margin-top: 14px;
+    }
+}
+.faq-answer {
+    &__ttl {
+        width: 1068px;
+        margin-left: 26px;
+        padding: 10px 0px 20px;
+        border-top: 1px solid #C4C4C4;
+        display: none;
+    }
+    &__ttl_visible{
+        display: block;
+    }
 }
 
 .help {
@@ -1857,12 +1877,9 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px auto;
+    padding: 50px 0px 25px;
 }
 .footer {
-
-    &__item {
-    }
 
     &__logo {
         margin-bottom: 77px;
@@ -1870,38 +1887,45 @@ footer{
 
     &__payment__ttl{
         font-family: 'Roboto';
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 400;
         color: #CBCBCB;
         margin-bottom: 14px;
     }
 
     &__payment {
-        width: 135px;
+        width: 150px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    &__payment__img:hover{
+        cursor: pointer;
     }
 
     &__offer-ttl {
         color: #6CAC3D;
         font-family: 'Roboto';
-        font-size: 13px;
+        font-size: 24px;
         font-weight: 700;
         margin-bottom: 15px;
-        text-align: center;
+        text-align: start;
     }
-
-    &__offer-list {
+    &__menu{
+        height: 174px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__offer-item {
         margin-bottom: 7px;
+        color: #595959;
     }
-    &__offer-link,
+    &__offer-list-link,
     &__menu-link{
         font-family: 'Roboto';
-        font-size: 13px;
+        font-size: 18px;
         font-weight: 400;
         color: #CBCBCB;
         &:hover{
@@ -1915,7 +1939,7 @@ footer{
     &__number {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     &__phone-icon {
@@ -1940,5 +1964,24 @@ footer{
     &__offer-link{
         color: #6CAC3D;
         text-decoration: underline;
+        margin: 5px 0px 14px 32px;
+    }
+}
+
+.footer {
+    &__mail,
+    &__location {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-family: 'Roboto';
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 14px;
+    }
+
+    &__mail-svg,
+    &__location {
+        margin-right: 11px;
     }
 }

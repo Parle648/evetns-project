@@ -1977,6 +1977,7 @@ body {
   font-weight: 400;
   color: #171616;
   margin-left: 27px;
+  margin-bottom: 14px;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
 }
@@ -1984,6 +1985,32 @@ body {
   cursor: pointer;
   color: #6CAC3D;
   text-decoration: underline;
+}
+
+.geen-link {
+  color: #6CAC3D;
+  text-decoration: underline;
+}
+
+.faq-answer-block_active {
+  background-color: #F2F2F2;
+  width: 1098px;
+  height: 102px;
+}
+
+.faq__question {
+  margin-top: 14px;
+}
+
+.faq-answer__ttl {
+  width: 1068px;
+  margin-left: 26px;
+  padding: 10px 0px 20px;
+  border-top: 1px solid #C4C4C4;
+  display: none;
+}
+.faq-answer__ttl_visible {
+  display: block;
 }
 
 .help {
@@ -2048,7 +2075,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 35px auto;
+  padding: 50px 0px 25px;
 }
 
 .footer__logo {
@@ -2056,13 +2083,13 @@ footer {
 }
 .footer__payment__ttl {
   font-family: "Roboto";
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   color: #CBCBCB;
   margin-bottom: 14px;
 }
 .footer__payment {
-  width: 135px;
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2073,24 +2100,41 @@ footer {
       -ms-flex-align: center;
           align-items: center;
 }
+.footer__payment__img:hover {
+  cursor: pointer;
+}
 .footer__offer-ttl {
   color: #6CAC3D;
   font-family: "Roboto";
-  font-size: 13px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 15px;
-  text-align: center;
+  text-align: start;
+}
+.footer__menu {
+  height: 174px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .footer__offer-item {
   margin-bottom: 7px;
+  color: #595959;
 }
-.footer__offer-link, .footer__menu-link {
+.footer__offer-list-link, .footer__menu-link {
   font-family: "Roboto";
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 400;
   color: #CBCBCB;
 }
-.footer__offer-link:hover, .footer__menu-link:hover {
+.footer__offer-list-link:hover, .footer__menu-link:hover {
   text-decoration: underline;
 }
 .footer__menu-link {
@@ -2104,9 +2148,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .footer__phone-icon {
   margin-right: 10px;
@@ -2133,4 +2177,22 @@ footer {
 .footer__offer-link {
   color: #6CAC3D;
   text-decoration: underline;
+  margin: 5px 0px 14px 32px;
+}
+
+.footer__mail, .footer__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+.footer__mail-svg, .footer__location {
+  margin-right: 11px;
 }
